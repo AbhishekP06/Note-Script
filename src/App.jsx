@@ -24,7 +24,7 @@ const router = createBrowserRouter(
       </>
     },
     {
-      path:"/notes:id",
+      path:"/notes/:id",
       element: 
       <>
         <Navbar />
