@@ -1,5 +1,5 @@
 import { NavLink } from "react-router-dom"
-import logo from "../assets/note-script-logo.png"
+import logo from "/note-script-logo.png"
 
 function Navbar() {
     return (
