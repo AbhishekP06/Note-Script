@@ -1,11 +1,12 @@
 import { NavLink } from "react-router-dom"
+import logo from "../assets/note-script-logo.png"
 
 function Navbar() {
     return (
         <>
             <div className="flex flex-row gap-10 place-items-center m-0">
                 <NavLink to="/">
-                    <img src="/src/assets/note-script-logo.png" alt="logo" className="w-[150px]" />
+                    <img src={logo} alt="logo" className="w-[150px]" />
                 </NavLink>
                 <NavLink
                     to="/"
