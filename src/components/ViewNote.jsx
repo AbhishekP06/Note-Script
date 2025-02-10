@@ -32,16 +32,13 @@ function ViewNote() {
         <>
             <div className=" bg-black p-3 rounded-2xl mt-6 max-w-5xl min-h-[500px] pl-2">
                 <div className="flex items-center relative">
-                    <div className="circle">
-                        <span className="red box"></span>
+                    {/* Window Style Header */}
+                    <div className="flex items-center gap-2 mt-3 pl-2">
+                        <div className="w-2 h-2 bg-red-500 rounded-full"></div>
+                        <div className="w-2 h-2 bg-yellow-500 rounded-full"></div>
+                        <div className="w-2 h-2 bg-green-500 rounded-full"></div>
                     </div>
-                    <div className="circle">
-                        <span className="yellow box"></span>
-                    </div>
-                    <div className="circle">
-                        <span className="green box"></span>
-                    </div>
-                    <div className="flex flex-wrap gap-8 mt-2 px-4 py-2 absolute right-0">
+                    <div className="flex flex-wrap gap-8 mt-3 px-4 py-2 absolute right-0">
                         {/* Share button */}
                         <button onClick={copyToClipboard}>
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-4">
@@ -56,7 +53,7 @@ function ViewNote() {
                         </button>
                     </div>
                 </div>
-                <div className="mt-6">
+                <div className="mt-4">
                     <h1 className="text-6xl">{note.title}</h1>
                     <div className="flex flex-wrap p-1 mt-2">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6">
@@ -64,7 +61,7 @@ function ViewNote() {
                         </svg>
                         <p className="pl-1">{formattedDate}</p>
                     </div>
-                    <p className="mt-5 p-1">{note.content}</p>
+                    <p className="mt-5 p-1 whitespace-pre-wrap">{note.content}</p>
                 </div>
             </div>
 

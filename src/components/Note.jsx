@@ -38,11 +38,13 @@ function Note() {
     return (
         <>
             <div>
-                <input className=" bg-black p-3 rounded-2xl mt-2 min-w-2xl pl-2"
+                <input
+                    className="bg-black p-3 rounded-2xl mt-2 w-full max-w-3xl pl-2"
                     type="search"
                     placeholder="Search here"
                     value={searchTerm}
-                    onChange={(e) => setSearchTerm(e.target.value)} />
+                    onChange={(e) => setSearchTerm(e.target.value)}
+                />
             </div>
             <div className="flex flex-wrap gap-4">
                 {filteredData.length > 0 &&
@@ -52,16 +54,11 @@ function Note() {
                                 key={note?._id}
                                 className="border bg-black p-3 mt-5 rounded-2xl pl-2 w-full sm:w-[300px] md:w-[350px] lg:w-[400px] min-h-[350px] max-h-[300px] relative"
                             >
-                                <div className="flex items-center">
-                                    <div className="circle">
-                                        <span className="red box"></span>
-                                    </div>
-                                    <div className="circle">
-                                        <span className="yellow box"></span>
-                                    </div>
-                                    <div className="circle">
-                                        <span className="green box"></span>
-                                    </div>
+                                {/* Window Style Header */}
+                                <div className="flex items-center gap-2 mt-2 pl-2">
+                                    <div className="w-2 h-2 bg-red-500 rounded-full"></div>
+                                    <div className="w-2 h-2 bg-yellow-500 rounded-full"></div>
+                                    <div className="w-2 h-2 bg-green-500 rounded-full"></div>
                                 </div>
                                 <div>
                                     <h1 className="text-white text-2xl font-bold line-clamp-1 ml-1 mt-1">{note.title}</h1>
@@ -73,9 +70,9 @@ function Note() {
                                     <p className="pl-1">{formattedDate(note.createdAt)}</p>
                                 </div>
                                 <div className="line-clamp-3 pt-3 text-gray-300 ml-1 mt-1">
-                                    <p>{note.content}</p>
+                                    <p className="whitespace-pre-wrap">{note.content}</p>
                                 </div>
-                                <div className="flex flex-wrap gap-8 mt-2 mb-1 px-4 py-2 place-content-evenly absolute bottom-0 ">
+                                <div className="flex flex-wrap gap-6 mt-2 mb-1 px-4 py-2 place-content-evenly absolute bottom-0">
                                     {/* Edit button */}
                                     <button>
                                         <Link to={`/?noteId=${note?._id}`}>
