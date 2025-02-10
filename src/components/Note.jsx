@@ -39,7 +39,7 @@ function Note() {
         <>
             <div>
                 <input
-                    className="bg-black p-3 rounded-2xl mt-2 w-full max-w-3xl pl-2"
+                    className="bg-gray-100 dark:bg-black dark:text-white p-3 rounded-2xl mt-2 w-full max-w-3xl pl-2 placeholder-gray-500 dark:placeholder-gray-400"
                     type="search"
                     placeholder="Search here"
                     value={searchTerm}
@@ -63,13 +63,13 @@ function Note() {
                                 <div>
                                     <h1 className="text-white text-2xl font-bold line-clamp-1 ml-1 mt-1">{note.title}</h1>
                                 </div>
-                                <div className="flex flex-wrap p-1 mt-2">
+                                <div className="flex flex-wrap p-1 mt-2 text-white">
                                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6">
                                         <path strokeLinecap="round" strokeLinejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 0 1 2.25-2.25h13.5A2.25 2.25 0 0 1 21 7.5v11.25m-18 0A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75m-18 0v-7.5A2.25 2.25 0 0 1 5.25 9h13.5A2.25 2.25 0 0 1 21 11.25v7.5" />
                                     </svg>
-                                    <p className="pl-1">{formattedDate(note.createdAt)}</p>
+                                    <p className="pl-1 text-white">{formattedDate(note.createdAt)}</p>
                                 </div>
-                                <div className="line-clamp-3 pt-3 text-gray-300 ml-1 mt-1">
+                                <div className="line-clamp-3 pt-3 text-white ml-1 mt-1">
                                     <p className="whitespace-pre-wrap">{note.content}</p>
                                 </div>
                                 <div className="flex flex-wrap gap-6 mt-2 mb-1 px-4 py-2 place-content-evenly absolute bottom-0">
