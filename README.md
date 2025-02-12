@@ -1,4 +1,4 @@
-# Note-Script
+# Note-Script(https://note-script.vercel.app/)
 
 Note-Script is a modern note-taking application built using **React**. It allows users to **write, view, edit, search, and share notes** efficiently. The app is designed with a clean and responsive UI powered by **Tailwind CSS** and manages state using **Redux Toolkit**.
 
