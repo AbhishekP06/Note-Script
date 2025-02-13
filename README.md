@@ -55,9 +55,6 @@ Note-Script is a modern note-taking application built using **React**. It allows
 ## Contributing
 Contributions are welcome! Feel free to **fork** the repository, create a **new branch**, and submit a **pull request**.
 
-## License
-This project is licensed under the **MIT License**.
-
 ---
 Made with ❤️ by Abhishek
 
